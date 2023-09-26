@@ -5,7 +5,7 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 ----
 ## Como executar
 
-Antes, garanta ter instalado a versão mais recentes do [docker](https://nodejs.org/pt-br/docs](https://docs.docker.com/desktop/install/windows-install)
+Antes, garanta ter instalado a versão mais recentes do [docker](https://docs.docker.com/desktop/install/windows-install)
 
 Após clonar o repositório, é necessário ir ao diretório raiz, pelo terminal, para poder executar os comandos descritos abaixo.
 
