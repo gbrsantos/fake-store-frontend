@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+    <mat-sidenav [formGroup]="categoriaForm" #sidenav mode="side" opened="true">
+      <button (click)="limparFiltro()" mat-button>Limpar</button>
+      <mat-selection-list formControlName="categoria" [multiple]="false">
+        <mat-list-option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</mat-list-option>
+      </mat-selection-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div class="product-container">
+        <div class="row">
+            <div class="col-md-3 example-card" *ngFor="let produto of paginaProdutos?.products">
+                <mat-card class="card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{produto.title}}</mat-card-title>
+                        <mat-card-subtitle>{{produto.brand}}</mat-card-subtitle>
+                        <mat-card-subtitle>{{produto.price | currency: 'BRL'}}</mat-card-subtitle>
+                    </mat-card-header>  
+                    <img class="card-image" [src]="produto.thumbnail" [alt]="produto.title">
+                    <mat-card-content>
+                        <p>{{produto.description}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button (click)="adicionarCarrinho(produto)" mat-button>Adicionar ao carrinho <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon> </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

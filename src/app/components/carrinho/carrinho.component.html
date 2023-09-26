@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-card class="card-principal"> <!-- Adicione uma classe ao card principal maior -->
+        <p>Carrinho de compras</p>
+        <div class="itens-carrinho">
+            <div class="cards-container">
+                <mat-card class="card-item" *ngFor="let produto of carrinho?.produtos; let i = index ">
+                    <mat-card-header>
+                        <mat-card-title-group>
+                            <mat-card-title>{{produto.nome}}</mat-card-title>
+                            <mat-card-subtitle>{{ produto.valor * produto.quantidade | currency: 'BRL' }}</mat-card-subtitle>
+                            <img mat-card-sm-image [src]="produto.imagem">
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <div class="row">
+                        <div>
+                            <label for="">Quantidade: </label>
+                            <select [disabled]="disabledQtd" (change)="atualizarQuantidade(produto)" [(ngModel)]="produto.quantidade" class="form-control">
+                                <option *ngFor="let numero of count" [value]="numero">{{numero}}</option>                               
+                            </select>
+                        </div>
+                    </div>
+
+                    <mat-card-content>
+                        Em estoque
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button (click)="excluirProduto(produto)" mat-button><mat-icon aria-hidden="false"
+                                aria-label="Example home icon" fontIcon="delete"></mat-icon> </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <mat-card class="info-card">
+                <mat-card-content>
+                    <h2>Resumo da Compra</h2>
+                    <p>Total de Itens: {{carrinho?.produtos ? carrinho?.produtos?.length : 0}}</p>
+                    <p>Valor Total: {{calcularTotalCompra() | currency: 'BRL' }}</p>
+                    <button *ngIf="calcularTotalCompra() != 0" (click)="finalizarCarrinho()" mat-button>Finalizar Compra</button>
+                </mat-card-content>
+            </mat-card>
+        </div>  
+    </mat-card>
+</div>

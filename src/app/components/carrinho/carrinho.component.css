@@ -1,0 +1,129 @@
+.card-principal {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .cards-container {   
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+  
+  .itens-carrinho {
+    display: flex; 
+    flex-direction: row;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .mat-card-subtitle, .valor-produto {
+    font-size: 1rem;
+    color: #007bff; 
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  label {
+    font-size: 0.9rem;
+  }
+  
+  select {
+    width: 70px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .mat-card-content {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+  }
+  
+  .mat-card-actions {
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #fff000; 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .info-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .info-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .mat-card-sm-image {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  .info-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mat-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .info-card {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .info-card button {
+    width: 100%;
+  }
+  
